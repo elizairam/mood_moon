@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #120d31;
+  padding: 70px;
+  color: #fff;
 }
 
 .App-logo {
@@ -8,29 +11,38 @@
 }
 
 .App-header {
-  background-color: #120d31;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #757575;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text {
+  color: #fff
 }
 
-.botao:link {
-  background-color: rgb(0, 225, 255);
-} 
+.calendario {
+  background-color:  #fff;
+  color: #808080;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 25px;
+  text-align: right;
+}
+
+.texto-calendario {
+  text-align: center;
+  color:#23beb2;
+  font-size:xx-large;
+}
+
+.imagem-calendario {
+  text-align: center;
+}
