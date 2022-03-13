@@ -1,8 +1,10 @@
 .App {
   text-align: center;
   background-color: #120d31;
-  padding: 70px;
+  padding: 100px;
   color: #fff;
+  width: 100%;
+  height: auto;
 }
 
 .App-logo {
@@ -20,16 +22,12 @@
   color: #fff;
 }
 
-.App-link {
-  color: #757575;
-}
-
-.text {
-  color: #fff
+.texto {
+  color: #fff;
 }
 
 .calendario {
-  background-color:  #fff;
+  background-color: #fff;
   color: #808080;
   padding: 30px;
   margin: 40px;
@@ -39,10 +37,26 @@
 
 .texto-calendario {
   text-align: center;
-  color:#23beb2;
-  font-size:xx-large;
+  color: #23beb2;
+  font-size: xx-large;
 }
 
 .imagem-calendario {
   text-align: center;
+}
+
+.footer {
+  padding: 60px;
+  background-color: #f5ee9e;
+  text-align: justify;
+  color: #808080;
+}
+
+.titulo {
+  padding: 5px;
+  color: #f5ee9e;
+}
+
+.imagem {
+  padding: 15px;
 }

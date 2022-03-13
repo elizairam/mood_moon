@@ -8,8 +8,8 @@ import Menu from "./Menu";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Menu />
-    <App />
+    {/* <Menu /> */}
+      <App />
     <Footer />
   </React.StrictMode>,
   document.getElementById("root")
