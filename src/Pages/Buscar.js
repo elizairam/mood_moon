@@ -47,7 +47,7 @@ export default function Buscar() {
         class="App-logo"
         src={ilustracao}
         alt="lua e planetas"
-        width={"320px"}
+        width={"200px"}
       />
       <Form>
         <div class="ui massive form">
