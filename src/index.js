@@ -4,12 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Footer from "./Footer";
-import Menu from "./Menu";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Menu /> */}
-      <App />
+    <App />
     <Footer />
   </React.StrictMode>,
   document.getElementById("root")

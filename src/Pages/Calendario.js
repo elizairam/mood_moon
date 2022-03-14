@@ -13,7 +13,6 @@ export default function Calendario() {
       const jsonData = await response.json();
       setCurrentMonthPhases(jsonData);
       setCurrentMonth(jsonData[0]);
-      console.log(currentMonthPhases);
     } catch (err) {
       console.error(err.message);
     }
