@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  React,{ useState } from "react";
 import "../App.css";
 import ilustracao from "../assets/clip-366.png";
 import DisplayData from "./DisplayData";
