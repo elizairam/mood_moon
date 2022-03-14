@@ -91,7 +91,7 @@ export default function Buscar() {
             </div>
           </div>
           <div
-            class="ui massive teal submit button"
+            class="ui huge teal submit button"
             onClick={searchData}
             type="submit"
           >
