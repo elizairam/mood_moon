@@ -23,7 +23,7 @@ export default function Inicio() {
 
   return (
     <div className="App">
-       <h1 className="ui teal header">_mood moon</h1>
+       <h1 class="titulo">_mood moon</h1>
       <header className="App-header">
         <img src={lua} className="App-logo" alt="logo" />
         {moons.map((moon) => (
