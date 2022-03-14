@@ -1,3 +1,8 @@
+# _mood moon | calendário lunar 🌕
+### Projeto de página que mostra a lunação do dia e do mês atual. 
+### Também é possível pesquisar a fase lunar de qualquer dia entre abril de 1905 até dezembro 2099.
+### Consome uma API baseada nas informações da tabela efeméride pela [Astrodienst](https://www.astro.com/swisseph/swepha_e.htm) 💫  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
