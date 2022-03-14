@@ -20,7 +20,7 @@ export default function DisplayData({ ano, mes }) {
 
   useEffect(() => {
     getMonthPhases();
-  }, [currentMonth, ano, mes]);
+  }, [currentMonth]);
 
   return (
     <div>
