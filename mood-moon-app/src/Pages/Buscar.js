@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../App.css";
 import ilustracao from "../assets/clip-366.png";
 import DisplayData from "./DisplayData";
+import { Dropdown, Form, Input } from "semantic-ui-react";
 
 export default function Buscar() {
   const [ano, setAno] = useState(2000);
@@ -12,6 +13,20 @@ export default function Buscar() {
   ]);
   const [resultado, setResultado] = useState(false);
   const [check, setCheck] = useState(false);
+  const options = [
+    { key: "janeiro", text: "janeiro", value: "janeiro" },
+    { key: "fevereiro", text: "fevereiro", value: "fevereiro" },
+    { key: "março", text: "março", value: "março" },
+    { key: "abril", text: "abril", value: "abril" },
+    { key: "maio", text: "maio", value: "maio" },
+    { key: "junho", text: "junho", value: "junho" },
+    { key: "julho", text: "julho", value: "julho" },
+    { key: "agosto", text: "agosto", value: "agosto" },
+    { key: "setembro", text: "setembro", value: "setembro" },
+    { key: "outubro", text: "outubro", value: "outubro" },
+    { key: "novembro", text: "novembro", value: "novembro" },
+    { key: "dezembro", text: "dezembro", value: "dezembro" },
+  ];
 
   const searchData = async () => {
     try {
@@ -34,44 +49,56 @@ export default function Buscar() {
         alt="lua e planetas"
         width={"320px"}
       />
-      <div class="ui massive form">
-        <div class="two fields">
-          <div class="field">
-            <label class="ui teal header">Ano</label>
-            <input
-              type="number"
-              defaultValue={2000}
-              value={ano}
-              onChange={(e) => setAno(e.target.value)}
-              name={ano}
-            />
-          </div>
-          <div class="field">
-            <label class="ui teal header">Mês</label>
-            <input
-              type="text"
-              defaultValue={"janeiro"}
-              value={mes}
-              onChange={(e) => setMes(e.target.value)}
-              name={mes}
-            />
-          </div>
+      <Form>
+        <div class="ui massive form">
+          <div class="two fields">
+            <div class="field">
+              <label class="ui teal header">Ano</label>
+              <Form.Field
+                control={Input}
+                placeholder="2000"
+                value={ano}
+                type="number"
+                onChange={(e) => setAno(e.target.value)}
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+              />
+            </div>
+            <div class="field">
+              <label class="ui teal header">Mês</label>
+              <Dropdown
+                placeholder="Mês"
+                fluid
+                selection
+                options={options}
+                value={mes}
+                onChange={(e, data) => setMes(data.value)}
+              />
+            </div>
 
-          <div class="three wide field">
-            <label class="ui teal header">Dia</label>
-            <input
-              type="number"
-              defaultValue={1}
-              value={dia}
-              onChange={(e) => setDia(e.target.value)}
-              name={dia}
-            />
+            <div class="three wide field">
+              <label class="ui teal header">Dia</label>
+              <input
+                type="number"
+                defaultValue={1}
+                value={dia}
+                onChange={(e) => setDia(e.target.value)}
+                name={dia}
+              />
+            </div>
+          </div>
+          <div
+            class="ui massive teal submit button"
+            onClick={searchData}
+            type="submit"
+          >
+            Buscar lua
           </div>
         </div>
-        <div class="ui massive teal submit button" onClick={searchData}>
-          Buscar lua
-        </div>
-      </div>
+      </Form>
       {resultado ? (
         <>
           <h1>{data.simbolo_lunar}</h1>
@@ -82,7 +109,6 @@ export default function Buscar() {
           <div class="ui toggle checkbox">
             <input
               type="checkbox"
-              name="public"
               onClick={() => setCheck(!check)}
             />
             <label>
