@@ -5,6 +5,7 @@ export default function DisplayData({ ano, mes }) {
   const [currentMonthPhases, setCurrentMonthPhases] = useState([]);
   const [currentMonth, setCurrentMonth] = useState([{ mes: "" }]);
 
+  useEffect(() => {
   const getMonthPhases = async () => {
     try {
       const response = await fetch(
@@ -17,8 +18,6 @@ export default function DisplayData({ ano, mes }) {
       console.error(err.message);
     }
   };
-
-  useEffect(() => {
     getMonthPhases();
   }, [currentMonth]);
 
