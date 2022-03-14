@@ -19,7 +19,7 @@ export default function DisplayData({ ano, mes }) {
     }
   };
     getMonthPhases();
-  }, [currentMonth]);
+  }, [currentMonth, ano, mes]);
 
   return (
     <div>
